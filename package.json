@@ -1,0 +1,59 @@
+{
+  "name": "tokn",
+  "version": "0.1.0",
+  "description": "Count tokens and see what a prompt, file or whole repo costs across GPT, Claude, Gemini and more.",
+  "type": "module",
+  "bin": {
+    "tokn": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "data"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test",
+    "prices": "npm run build && node scripts/update-prices.mjs",
+    "prepublishOnly": "npm run prices && npm test"
+  },
+  "keywords": [
+    "tokens",
+    "tokenizer",
+    "llm",
+    "openai",
+    "claude",
+    "gemini",
+    "cost",
+    "pricing",
+    "cli",
+    "tiktoken"
+  ],
+  "author": "Koustav Dey",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imnottaken/tokn.git"
+  },
+  "homepage": "https://github.com/imnottaken/tokn#readme",
+  "bugs": {
+    "url": "https://github.com/imnottaken/tokn/issues"
+  },
+  "engines": {
+    "node": ">=18.3"
+  },
+  "dependencies": {
+    "js-tiktoken": "^1.0.21"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0"
+  }
+}
