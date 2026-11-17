@@ -1,5 +1,5 @@
 {
-  "name": "tokn",
+  "name": "@76yuh/tokn",
   "version": "0.1.0",
   "description": "Count tokens and see what a prompt, file or whole repo costs across GPT, Claude, Gemini and more.",
   "type": "module",
@@ -55,5 +55,8 @@
   "devDependencies": {
     "@types/node": "^22.0.0",
     "typescript": "^5.9.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

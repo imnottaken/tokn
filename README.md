@@ -5,7 +5,7 @@
 Before you paste a codebase into a model or ship a prompt that runs 10,000 times a day, find out what it costs, which model is cheapest, and whether it even fits in the context window.
 
 ```console
-$ npx tokn ./my-app -o 1000 -n 1000 -f
+$ npx @76yuh/tokn ./my-app -o 1000 -n 1000 -f
 
 tokn  ·  my-app    prices 2026-11-17
 
@@ -38,8 +38,8 @@ That last part is often the most useful: one SVG icons file was 16% of this enti
 ## Install
 
 ```bash
-npx tokn <file-or-folder>      # no install
-npm i -g tokn                  # or keep it around
+npx @76yuh/tokn <file-or-folder>   # no install
+npm i -g @76yuh/tokn               # or install it, then just run: tokn
 ```
 
 ## Usage
@@ -88,7 +88,7 @@ Prices change. Treat the numbers as a planning estimate, not an invoice.
 ## As a library
 
 ```ts
-import { countTokens, loadPrices, priceRow } from "tokn";
+import { countTokens, loadPrices, priceRow } from "@76yuh/tokn";
 
 const tokens = countTokens(prompt);
 const book = loadPrices();
